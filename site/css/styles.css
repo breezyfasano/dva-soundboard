@@ -1,2 +1,10 @@
-body {
-  background: #ff6699; }
+.buttons {
+  width: 100%; }
+
+.dvaButton {
+  width: 100px;
+  height: 100px;
+  background-color: #ff9de2;
+  margin: 0 auto 0 auto;
+  display: block;
+  text-align: center; }

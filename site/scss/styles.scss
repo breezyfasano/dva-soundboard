@@ -1,3 +1,16 @@
-body {
-    background: #ff6699;
+// Variables
+
+$dvaPink: #ff9de2;
+
+.buttons {
+    width: 100%;
+}
+
+.dvaButton {
+    width: 100px;
+    height: 100px;
+    background-color: $dvaPink;
+    margin: 0 auto 0 auto;
+    display: block;
+    text-align: center;
 }
