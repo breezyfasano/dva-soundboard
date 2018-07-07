@@ -1,3 +1,7 @@
+// TODO
+// Toggle a button effect class to mimic a down press
+// Add 
+
 function playSound(i) { // accepts the index no as the argument and plays the corresponding audio clip
     const audioClip = document.querySelector(`audio[data-i="${i}"`);
     audioClip.currentTime = 0;
