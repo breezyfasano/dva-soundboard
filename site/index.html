@@ -11,21 +11,24 @@
 
 <body>
     <div class="buttons">
-        <button class="dvaButton">Click me</button>
+        <button class="dvaButton" onclick="playSound(0)"> Annyeong! </button>
+        <button class="dvaButton" onclick="playSound(1)"> Click me </button>
+        <button class="dvaButton" onclick="playSound(2)"> Aw no fair! </button>
     </div>
 
-    <audio src="audio/Anneong.ogg"></audio>
+    <audio src="audio/Annyeong.ogg" data-i="0" preload="auto"></audio>
+    <audio src="audio/AreYouEvenTrying.ogg" data-i="1" preload="auto"></audio>
+    <audio src="audio/AwNoFair.ogg" data-i="2" preload="auto"></audio>
 
     <script>
-     const allButtons = document.getElementsByClassName(".dvaButton");
-     const allAudio = document.getElementsByTagName("audio");
-
-     function echoElement() {
-         console.log(allButtons[0]);
-     }
-
-window.onclick = echoElement();
+        function playSound(i) { // accepts the index no as the argument and plays the corresponding audio clip
+            const audioClip = document.querySelector(`audio[data-i="${i}"`);
+            audioClip.currentTime = 0;
+            audioClip.play();
+        }
     </script>
+
+
 </body>
 
 </html>
