@@ -87,7 +87,7 @@ body:not(.user-is-tabbing) textarea:focus {
     transform: scale(0.5);
     position: fixed;
     left: -130px;
-    margin-top: -70px; }
+    margin-top: -40px; }
   .credit {
     font-size: .7em;
     display: inline; }
