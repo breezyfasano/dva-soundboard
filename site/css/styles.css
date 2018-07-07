@@ -1,10 +1,52 @@
-.buttons {
-  width: 100%; }
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Montserrat");
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.sidebar {
+  margin: 0;
+  padding: 0; }
+  .sidebar h2 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif; }
 
 .dvaButton {
-  width: 100px;
-  height: 100px;
-  background-color: #ff9de2;
   margin: 0 auto 0 auto;
   display: inline-block;
-  text-align: center; }
+  text-align: center;
+  background: none;
+  border: none;
+  margin: 20px; }
+  .dvaButton span {
+    display: block; }
+
+.buttons-container {
+  margin-top: 20px; }
+
+img {
+  width: 100px; }
+
+.sidebar {
+  width: 100%;
+  background-color: #fff; }
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none; }
+
+@media (min-width: 1281px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    ustify-content: flex-start; }
+  .sidebar {
+    width: 300px;
+    height: 100vh; } }
