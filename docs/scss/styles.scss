@@ -115,9 +115,9 @@ body:not(.user-is-tabbing) textarea:focus {
     .dvaPixel {
         display: block;
          transform: scale(.5);
-         position: fixed;
-         left:-130px;
-         margin-top: -40px;
+         position: absolute;
+         left:-90px;
+         margin-top: 0;
     }
 
     .credit {
