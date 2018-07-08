@@ -8,16 +8,27 @@ body, html {
 
 a, a:visited {
   color: #ee4bb5;
+  -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-duration: .5s;
   transition-duration: .5s; }
 
 a:hover {
   color: blue; }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .sidebar {
@@ -39,7 +50,9 @@ a:hover {
 
 .dvaButton {
   margin: 0 auto 0 auto;
+  -webkit-transform: scale(0.955);
   transform: scale(0.955);
+  -webkit-transition: all .07s ease;
   transition: all .07s ease;
   display: inline-block;
   text-align: center;
@@ -55,9 +68,12 @@ a:hover {
     line-height: 1.5em; }
   .dvaButton img {
     width: 80px;
+    -webkit-filter: drop-shadow(5px 5px 0px blue);
     filter: drop-shadow(5px 5px 0px blue); }
   .dvaButton img:active {
+    -webkit-transform: translateX(5px);
     transform: translateX(5px);
+    -webkit-filter: drop-shadow(1px 1px 0px blue);
     filter: drop-shadow(1px 1px 0px blue); }
 
 .dvaPixel {
@@ -74,8 +90,15 @@ body:not(.user-is-tabbing) textarea:focus {
 
 @media (min-width: 1281px) {
   .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start; }
   .sidebar {
     width: 330px;
@@ -84,6 +107,7 @@ body:not(.user-is-tabbing) textarea:focus {
     margin-top: -10px; }
   .dvaPixel {
     display: block;
+    -webkit-transform: scale(0.5);
     transform: scale(0.5);
     position: absolute;
     left: -90px;

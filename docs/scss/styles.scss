@@ -19,8 +19,10 @@ body, html {
 
 a, a:visited {
     color: #ee4bb5;
+    -webkit-transition-property: color;
     transition-property: color;
-    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
 }
 
 a:hover {
@@ -28,10 +30,19 @@ a:hover {
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .sidebar {
@@ -58,7 +69,9 @@ a:hover {
 
 .dvaButton {
     margin: 0 auto 0 auto;
-    transform: scale(.955);
+    -webkit-transform: scale(.955);
+            transform: scale(.955);
+    -webkit-transition: all .07s ease;
     transition: all .07s ease;
     display: inline-block;
     text-align: center;
@@ -75,11 +88,14 @@ a:hover {
         }
         img {
             width: 80px;
-            filter: drop-shadow( 5px 5px 0px $shadow);
+            -webkit-filter: drop-shadow( 5px 5px 0px $shadow);
+                    filter: drop-shadow( 5px 5px 0px $shadow);
         }
         img:active {
-            transform: translateX(5px);
-            filter: drop-shadow( 1px 1px 0px $shadow);
+            -webkit-transform: translateX(5px);
+                    transform: translateX(5px);
+            -webkit-filter: drop-shadow( 1px 1px 0px $shadow);
+                    filter: drop-shadow( 1px 1px 0px $shadow);
         }
 }
 
@@ -101,9 +117,16 @@ body:not(.user-is-tabbing) textarea:focus {
 
 @media (min-width: 1281px) { //Desktop Only
     .container {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
     .sidebar {
         width: 330px;
@@ -114,7 +137,8 @@ body:not(.user-is-tabbing) textarea:focus {
 
     .dvaPixel {
         display: block;
-         transform: scale(.5);
+         -webkit-transform: scale(.5);
+                 transform: scale(.5);
          position: absolute;
          left:-90px;
          margin-top: 0;
