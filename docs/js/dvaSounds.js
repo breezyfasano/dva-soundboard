@@ -8,6 +8,15 @@ function playSound(i) { // accepts the index no as the argument and plays the co
     audioClip.play();
 }
 
+  function buttonAnimation(elem) {
+      var a = document.getElementsByTagName('button')
+      for (i = 0; i < a.length; i++) {
+          a[i].classList.remove('active');
+      }
+      elem.classList.add('active');
+  }
+
+
 // Code block below removes the focus ring, but allows it to still be used for those unable to use a mouse.
 // Code taken from an awesome Medium article on Accessibility & the focus ring. 
 // https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2

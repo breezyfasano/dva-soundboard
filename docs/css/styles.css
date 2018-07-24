@@ -61,7 +61,7 @@ a:hover {
   margin: 30px auto 0 25px;
   width: 90px; }
   .dvaButton span {
-    display: block;
+    display: inline-block;
     margin-top: 10px;
     font-family: "Inconsolata", monospace;
     font-size: 1.3em;
@@ -94,6 +94,7 @@ body:not(.user-is-tabbing) textarea:focus {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    flex-wrap: wrap;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -110,20 +111,24 @@ body:not(.user-is-tabbing) textarea:focus {
     -webkit-transform: scale(0.5);
     transform: scale(0.5);
     position: absolute;
-    left: -90px;
-    margin-top: 0; }
-  .credit {
-    font-size: .7em;
-    display: inline; }
-  .buttons-container {
-    margin: 20px 0 0 405px; }
-  .dvaButton {
-    width: 150px;
-    margin-right: 40px; }
-    .dvaButton span {
-      font-size: 2em;
-      line-height: 1.5em; }
-    .dvaButton img {
-      width: 110px; }
-    .dvaButton:last-child {
-      margin-bottom: 70px; } }
+    left: -150px;
+    bottom: -50px;
+    margin-top: 0; } }
+
+.credit {
+  font-size: .7em;
+  display: inline; }
+
+.buttons-container {
+  margin: 20px 0 0 405px; }
+
+.dvaButton {
+  width: 150px;
+  margin-right: 40px; }
+  .dvaButton span {
+    font-size: 2em;
+    line-height: 1.5em; }
+  .dvaButton img {
+    width: 110px; }
+  .dvaButton:last-child {
+    margin-bottom: 70px; }

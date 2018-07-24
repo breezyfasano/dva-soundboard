@@ -80,7 +80,7 @@ a:hover {
     margin: 30px auto 0 25px;
     width: 90px;
         span {
-            display: block;
+            display: inline-block;
             margin-top: 10px;
             font-family: $body-font;
             font-size: 1.3em;
@@ -115,12 +115,13 @@ body:not(.user-is-tabbing) textarea:focus {
     outline: none;
 }
 
-@media (min-width: 1281px) { //Desktop Only
+@media (min-width: 1281px) { // Desktop Only
     .container {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row;
+                 flex-wrap: wrap;
         -webkit-box-align: start;
             -ms-flex-align: start;
                 align-items: flex-start;
@@ -140,9 +141,11 @@ body:not(.user-is-tabbing) textarea:focus {
          -webkit-transform: scale(.5);
                  transform: scale(.5);
          position: absolute;
-         left:-90px;
+         left: -150px;
+         bottom: -50px;
          margin-top: 0;
     }
+}
 
     .credit {
         font-size: .7em;
@@ -168,4 +171,3 @@ body:not(.user-is-tabbing) textarea:focus {
                 margin-bottom: 70px;
             }
     }
-}
