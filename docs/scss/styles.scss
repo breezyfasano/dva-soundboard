@@ -1,173 +1,69 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import url("https://fonts.googleapis.com/css?family=VT323");
 
-//variables
-$background: #f9f9f9;
-$sidebar: #fff;
-$shadow: blue;
-$header-font: 'Montserrat', sans-serif;
-$body-font: 'Inconsolata', monospace;
-
-
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:400,700|VT323');
-
-body, html {
-    margin: 0;
-    padding: 0;
-    background: $background;
-    font-family: 'VT323';
-    font-size: 1.25em;
-}
-
-a, a:visited {
-    color: #ee4bb5;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: .5s;
-            transition-duration: .5s;
-}
-
-a:hover {
-    color: blue;
+html,
+body {
+  font-family: "VT323", monospace;
+  font-size: 20px;
 }
 
 .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: $lightgray;
+  @include for-desktop-up {
+        flex-direction: row;
+        height: 100vh;
+    }
 }
 
 .sidebar {
-    width: 100%;
-    background-color: $sidebar;
-    margin:0;
-    padding: 40px !important;
-        h2 {
-            text-align: center;
-            color: blue;
-            font-family: $header-font;
-            font-weight: 700;
-        }
-
-        p {
-            text-align: justify;
-            margin: 15px;
-        }
+  background: #fff;
+  padding: 3% 3% 0 3%;
+  position:relative;
+  padding-bottom: 250px;
+  img {
+    max-width: 300px;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+  }
+  @include for-desktop-up {
+    max-width: 25vw;
+  }
 }
 
 .buttons-container {
-    margin: 20px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+  margin: 20px auto 0 auto;
+  @include for-desktop-up {
+      justify-content: baseline;
+  }
 }
 
 .dvaButton {
-    margin: 0 auto 0 auto;
-    -webkit-transform: scale(.955);
-            transform: scale(.955);
-    -webkit-transition: all .07s ease;
-    transition: all .07s ease;
-    display: inline-block;
-    text-align: center;
-    background: none;
-    border: none;
-    margin: 30px auto 0 25px;
-    width: 90px;
-        span {
-            display: inline-block;
-            margin-top: 10px;
-            font-family: $body-font;
-            font-size: 1.3em;
-            line-height: 1.5em;
-        }
-        img {
-            width: 80px;
-            -webkit-filter: drop-shadow( 5px 5px 0px $shadow);
-                    filter: drop-shadow( 5px 5px 0px $shadow);
-        }
-        img:active {
-            -webkit-transform: translateX(5px);
-                    transform: translateX(5px);
-            -webkit-filter: drop-shadow( 1px 1px 0px $shadow);
-                    filter: drop-shadow( 1px 1px 0px $shadow);
-        }
+  display: block;
+  background: transparent;
+  border: 0;
+  width: 80px;
+  margin: 11px;
+  text-align: center;
+  @include for-desktop-up {
+      margin:30px;
+      max-height: 150px;
+      
+  }
+  img {
+    max-width: 80px;
+    display: block;
+    margin-bottom: 10px;
+    @include for-desktop-up {
+        max-width: 100px;
+    }
+  }
 }
-
-.dvaPixel {
- display: none;
-}
-
-.credit {
-    display: none;
-}
-
-// Code block below removes the focus ring, but allows it to still be used for those unable to use a mouse.
-body:not(.user-is-tabbing) button:focus,
-body:not(.user-is-tabbing) input:focus,
-body:not(.user-is-tabbing) select:focus,
-body:not(.user-is-tabbing) textarea:focus {
-    outline: none;
-}
-
-@media (min-width: 1281px) { // Desktop Only
-    .container {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-                 flex-wrap: wrap;
-        -webkit-box-align: start;
-            -ms-flex-align: start;
-                align-items: flex-start;
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
-    }
-    .sidebar {
-        width: 330px;
-        height: 100vh;
-        position: fixed;
-        margin-top: -10px;
-    }
-
-    .dvaPixel {
-        display: block;
-         -webkit-transform: scale(.5);
-                 transform: scale(.5);
-         position: absolute;
-         left: -150px;
-         bottom: -50px;
-         margin-top: 0;
-    }
-}
-
-    .credit {
-        font-size: .7em;
-        display: inline;
-    }
-
-    .buttons-container {
-        margin: 20px 0 0 405px;
-    }
-
-    .dvaButton {
-        width: 150px;
-        margin-right: 40px;
-            span {
-                font-size: 2em;
-                line-height: 1.5em;
-            }
-            
-            img {
-                width: 110px;
-            }
-            &:last-child {
-                margin-bottom: 70px;
-            }
-    }
